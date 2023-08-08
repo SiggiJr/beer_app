@@ -1,0 +1,25 @@
+.navbar{
+  background-color: #FFCA41;
+  padding-block: 7px;
+  position: sticky;
+  bottom: 0;
+  .background_circle{
+    background-color: #fff;
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    margin-inline: auto;
+    display: flex;
+    position: relative;
+    img{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 41px;
+      width: 41px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
