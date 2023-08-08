@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { apiBaseLink } from "../../../../utils/apiLink/apiLink";
 import Navbar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
@@ -12,7 +12,8 @@ const BeerDetails = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   const beerId = useParams().id
-  const backLink = beerId === "random" ? "/" : "/all-beers"
+  // const backLink = beerId === "random" ? "/" : "/all-beers"
+  const navigator = useNavigate()
 
   useEffect(() => {
     fetch(`${apiBaseLink}/${beerId}`)
@@ -29,7 +30,7 @@ const BeerDetails = () => {
   }, [])
 
   if (isLoading) {
-    return
+    return <p>Loading...</p>
   }
 
   return ( 
@@ -47,9 +48,9 @@ const BeerDetails = () => {
           <p>{beer.attenuation_level}</p>
         </div>
         <p>{beer.description}</p>
-        <Link to={backLink} className="back_btn">
+        <button onClick={() => navigator(-1)} className="back_btn">
           <img src="/src/assets/img/Back.svg" alt="back" className="back"/>
-        </Link>
+        </button>
       </div>
       <Navbar/>
     </section>

@@ -26,7 +26,7 @@ useEffect(() => {
 }, [])
 
   if (isLoading) {
-    return
+    return <p>Loading...</p>
   }
 
   return ( 
