@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { apiBaseLink } from "../../../../utils/apiLink/apiLink";
-import Navbar from "../Navbar/Navbar";
-import { Link } from "react-router-dom";
+import backArrowIcon from '../../../../assets/img/Back.svg'
 
 import './BeerDetails.scss'
 
@@ -49,7 +48,7 @@ const BeerDetails = () => {
         </div>
         <p>{beer.description}</p>
         <button onClick={() => navigator(-1)} className="back_btn">
-          <img src="/src/assets/img/Back.svg" alt="back" className="back"/>
+          <img src={backArrowIcon} alt="back" className="back"/>
         </button>
       </div>
     </section>

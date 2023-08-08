@@ -3,7 +3,6 @@ import './AllBeers.scss'
 import { useEffect, useState } from "react";
 import { apiBaseLink } from "../../../utils/apiLink/apiLink";
 import BeerItem from "../shared/BeerItem/BeerItem";
-import Navbar from '../shared/Navbar/Navbar';
 
 const AllBeers = () => {
 

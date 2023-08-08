@@ -1,4 +1,5 @@
 import './Navbar.scss'
+import bierNavImage from '../../../../assets/img/bier_nav.svg'
 
 import { NavLink } from 'react-router-dom';
 
@@ -7,7 +8,7 @@ const Navbar = () => {
   <nav className="navbar">
     <NavLink to={"/"}>
       <div className="background_circle">
-        <img src="/src/assets/img/bier_nav.svg" alt="Proooost!" />
+        <img src={bierNavImage} alt="Proooost!" />
       </div>
     </NavLink>
   </nav> 
