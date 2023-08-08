@@ -4,12 +4,15 @@ import { apiBaseLink } from "../../../../utils/apiLink/apiLink";
 import Navbar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
 
+import './BeerDetails.scss'
+
 const BeerDetails = () => {
 
   const [beer, setBeer] = useState()
   const [isLoading, setIsLoading] = useState(true)
 
   const beerId = useParams().id
+  const backLink = beerId === "random" ? "/" : "/all-beers"
 
   useEffect(() => {
     fetch(`${apiBaseLink}/${beerId}`)
@@ -29,18 +32,25 @@ const BeerDetails = () => {
     return
   }
 
-  // const beer = beers.find((beer) => beer._id === beerId)
-
-
   return ( 
     <section className="details_section">
-      <img src={beer.image_url} alt={beer.name} className="img_wrapper" />
-      <h1></h1>
-      <h2></h2>
-      <div className="data_wrapper"></div>
-      <div className="data_wrapper"></div>
-      <p></p>
-      <Link className="back_btn">⬅</Link>
+      <div className="content_wrapper">
+        <img src={beer.image_url} alt={beer.name} className="beer_img"  />
+        <h1>{beer.name}</h1>
+        <h2>{beer.tagline}</h2>
+        <div className="data_wrapper">
+          <p>First brewed:</p>
+          <p>{beer.first_brewed}</p>
+        </div>
+        <div className="data_wrapper">
+          <p>Attenuation Level:</p>
+          <p>{beer.attenuation_level}</p>
+        </div>
+        <p>{beer.description}</p>
+        <Link to={backLink} className="back_btn">
+          <img src="/src/assets/img/Back.svg" alt="back" className="back"/>
+        </Link>
+      </div>
       <Navbar/>
     </section>
   );

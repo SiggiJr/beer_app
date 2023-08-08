@@ -7,7 +7,7 @@ const Navbar = () => {
   <nav className="navbar">
     <NavLink to={"/"}>
       <div className="background_circle">
-        <img src="../../../src/assets/img/bier_nav.svg" alt="Proooost!" />
+        <img src="/src/assets/img/bier_nav.svg" alt="Proooost!" />
       </div>
     </NavLink>
   </nav> 

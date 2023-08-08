@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom';
 import './BeerOverview.scss'
 
-const BeerOverview = ({header, img}) => {
+const BeerOverview = ({header, img, path, path1, path2}) => {
+
+  const link = path ? `${path}` : `${path1}/${path2}`
+
   return ( 
     <article className="beer_overview">
-      <Link to={"/all-beers"}>
+      <Link to={link}>
       <div className="img_wrapper">
         <img src={img} alt={header} />
       </div>
