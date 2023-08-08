@@ -31,8 +31,9 @@ useEffect(() => {
 
   return ( 
     <section className="all_beers">
-    <div className="beer_list">{allBeers.map(beer => <BeerItem key={beer._id} beer={beer}/>)}</div>
-    <Navbar/>
+    <div className="beer_list">
+      {allBeers.map(beer => <BeerItem key={beer._id} beer={beer}/>)}
+      </div>
     </section>
   );
 }

@@ -52,7 +52,6 @@ const BeerDetails = () => {
           <img src="/src/assets/img/Back.svg" alt="back" className="back"/>
         </button>
       </div>
-      <Navbar/>
     </section>
   );
 }
