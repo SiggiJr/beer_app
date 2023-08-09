@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const BeerItem = ({beer}) => {
   return ( 
-    <section className="beer_item_wrapper">
       <article className="beer_item">
         <div className="image_wrapper"><img src={beer.image_url} alt={beer.name} /></div>
         <div className="info_wrapper">
@@ -14,7 +13,6 @@ const BeerItem = ({beer}) => {
           <Link to={`/${beer.name}/${beer._id}`}>Details</Link>
         </div>
       </article>
-    </section>
   );
 }
 

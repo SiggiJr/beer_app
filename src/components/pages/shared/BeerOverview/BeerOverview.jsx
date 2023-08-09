@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import './BeerOverview.scss'
 
-const BeerOverview = ({header, img, path, path1, path2}) => {
+const BeerOverview = ({header, img, path}) => {
 
-  const link = path ? `${path}` : `${path1}/${path2}`
+  const link = typeof path === "string" ? `${path}` : `${path.part1}${path.part2}`
 
   return ( 
     <article className="beer_overview">

@@ -6,10 +6,8 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
   return ( 
   <nav className="navbar">
-    <NavLink to={"/"}>
-      <div className="background_circle">
+    <NavLink to={"/"} className={"nav_link"}>
         <img src={bierNavImage} alt="Proooost!" />
-      </div>
     </NavLink>
   </nav> 
   );

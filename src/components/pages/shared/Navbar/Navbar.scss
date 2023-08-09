@@ -3,7 +3,7 @@
   padding-block: 7px;
   position: sticky;
   bottom: 0;
-  .background_circle{
+  .nav_link{
     background-color: #fff;
     width: 57px;
     height: 57px;
@@ -20,6 +20,7 @@
       width: 41px;
       justify-content: center;
       align-items: center;
+      display: block;
     }
   }
 }

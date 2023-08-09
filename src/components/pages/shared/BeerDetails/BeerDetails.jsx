@@ -38,11 +38,11 @@ const BeerDetails = () => {
         <img src={beer.image_url} alt={beer.name} className="beer_img"  />
         <h1>{beer.name}</h1>
         <h2>{beer.tagline}</h2>
-        <div className="data_wrapper">
+        <div className="more_beer_details_wrapper">
           <p>First brewed:</p>
           <p>{beer.first_brewed}</p>
         </div>
-        <div className="data_wrapper">
+        <div className="more_beer_details_wrapper">
           <p>Attenuation Level:</p>
           <p>{beer.attenuation_level}</p>
         </div>
